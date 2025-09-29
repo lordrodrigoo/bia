@@ -20,7 +20,7 @@ COPY . .
 # Build do front-end com Vite
 RUN cd client && VITE_API_URL=http://www.daliabolosedoces.com.br npm run build
 
-# Limpeza das dependências de desenvolvimento do client para reduzir tamanho
+# Limpeza das dependências de desenvolvimento do client para reduzir tamanho.
 RUN cd client && npm prune --production && rm -rf node_modules/.cache
 
 EXPOSE 8080
